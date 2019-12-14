@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#73e68a">
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <!-- アドレスバー等のブラウザのUIを非表示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+    <meta name="電通App" content="black">
+    <!-- ホーム画面に表示されるアプリ名 -->
+    <meta name="電通App" content="TAP10">
+    <!-- ホーム画面に表示されるアプリアイコン -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="index.css">
+    <script>
+        window.addEventListener('load', function() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("/serviceWorker.js")
+                    .then(function(registration) {
+                        console.log("serviceWorker registed.");
+                    }).catch(function(error) {
+                        console.warn("serviceWorker error.", error);
+                    });
+            }
+        });
+    </script>
+    <title>大阪電気通信大学</title>
+</head>
+
+<body>
+    <div class="header">
+        <p>home</p>
+    </div>
+
+    <main_1>
+        <div class="main1">
+            <div class="box1">
+                <a href="html/ondesk.html">
+                    <p>出席</p>
+                </a>
+            </div>
+            <div class="box2">
+                <a href="kadai.html">
+                    <p>課題</p>
+                </a>
+            </div>
+
+        </div>
+        <div class="main1">
+            <div class="box1">
+                <a href="https://mypage.osakac.ac.jp/portal/timetable/">
+                    <p>時間割</p>
+                </a>
+            </div>
+            <div class="box2">
+                <a href="html/sirabasu.html">
+                    <p>シラバス</p>
+                </a>
+            </div>
+        </div>
+        <div class="home_r">
+            <a href="index.html">
+                <p id="right">home</p>
+            </a>
+            <a href="index.html">
+                <p id="left">home</p>
+            </a>
+        </div>
+        <div class="access">
+            <a href="https://sslvpn.osakac.ac.jp/+CSCOE+/portal.html">
+                <p>学内サーバ</p>
+            </a>
+        </div>
+    </main_1>
+    <div class="login">
+        <iframe src="https://mypage.osakac.ac.jp/portal/login/index" frameborder=0 width="650px" height="850px"></iframe>
+    </div>
+
+</body>
+
+</html>

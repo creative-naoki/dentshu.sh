@@ -1,0 +1,42 @@
+.home_r {
+    background-color: yellow;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    position: relative;
+}
+
+.home_r p {
+    color: teal;
+    margin: 7px 0;
+    font-size: 25px;
+}
+
+#right {
+    position: absolute;
+    left: 10px;
+}
+
+#left {
+    position: absolute;
+    right: 10px;
+}
+
+.hoge {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.header {
+    background-color: rgb(177, 255, 255);
+    width: 100%;
+    height: 60px;
+}
+
+body {
+    margin: 0%;
+}
+
+iframe {
+    transform: scale(1.2);
+}

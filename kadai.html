@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#73e68a">
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="manifest" href="manifest.json">
+    <!-- アドレスバー等のブラウザのUIを非表示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+    <meta name="電通App" content="black">
+    <!-- ホーム画面に表示されるアプリ名 -->
+    <meta name="電通App" content="TAP10">
+    <!-- ホーム画面に表示されるアプリアイコン -->
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="kadai.css">
+    <script>
+        window.addEventListener('load', function() {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register("/serviceWorker.js")
+                    .then(function(registration) {
+                        console.log("serviceWorker registed.");
+                    }).catch(function(error) {
+                        console.warn("serviceWorker error.", error);
+                    });
+            }
+        });
+    </script>
+    <title>課題</title>
+</head>
+
+<body>
+    <div class="list">
+        <div class="box1">
+            <a href="https://moodle2019.mc2.osakac.ac.jp/2019/course/view.php?id=239">
+                <p>青年心理</p>
+            </a>
+        </div>
+        <div class="box2">
+            <a href="html/kadai1.html">
+                <p>課題レポート</p>
+            </a>
+        </div>
+    </div>
+    <div class="home_r">
+        <a href="index.html">
+            <p id="right">home</p>
+        </a>
+        <a href="index.html">
+            <p id="left">home</p>
+        </a>
+    </div>
+
+</body>
+
+</html>
